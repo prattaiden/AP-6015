@@ -1,0 +1,27 @@
+# Makefile HW1 CS6015
+# Aiden Pratt
+# to build a target, enter make <target>
+# targets: 
+#clean deletes all .o and .out files and the executable
+#printM prints the content of the MACROS
+#run creates and runs the program in the terminal
+
+CXX=c++
+CFLAGS= -std=c++11
+CXXSOURCE= cmdline.cpp main.cpp
+HEADERS= cmdline.hpp
+
+run: program
+	./msdscript
+
+program: $(CXXSOURCE) $(HEADERS)
+	$(CXX) $(CFLAGS) -o msdscript $(CXXSOURCE)
+
+.PHONY: clean
+
+clean: 
+	rm -f *.o *.out program
+
+printM:
+	$ (echo $(HEADERS) $(CXXSOURCE))
+

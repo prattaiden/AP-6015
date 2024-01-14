@@ -1,0 +1,39 @@
+lecture 2 finish up
+
+device is a state machine that checks to see whats on the bus
+keyboard, did user type anything
+
+one person talking on the bus at a time
+
+memory hierarchy fastest to slowest
+  registers - 1cycle
+  cache(l1,l2) - faster version of memory that main memory , faster than main memory - 10cycles
+  main memory(ram) -50or100 cycles
+  disk
+
+state machine
+control unit for cpu state machine
+  fetch an instruction
+    ask ram for instruction whose address is stored in the ip
+      getting it from the cache
+  execute instruction we got
+  repeat
+
+IR instruction register
+IP instruction pointer
+
+
+lecture 3 assembly
+quiz:
+   char* is a string pointer
+   length is 4 3/ 4bytes of memory
+   as a char pointer in the memory, points to first char
+   \0
+   strlen
+
+   sizeof() however big a pointer is
+   size_t placeholder that matches the size of your computer
+   _t convention that it is a type
+
+stack frame all the data for a specific function
+heap is dynamically allocated

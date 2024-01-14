@@ -1,0 +1,28 @@
+# Makefile part1 lab1 CS6015
+# Aiden Pratt
+# to build a target, enter make <target>
+# targets: 
+#clean deletes all .o and .out files and the executable
+#all runs and creates the executable program
+
+all: program
+
+program: Caps.o Clothing.o Pants.o main.o
+	c++ Caps.o Clothing.o Pants.o main.o -o program
+
+Caps.o: Caps.cpp Caps.h
+	c++ -c Caps.cpp
+
+Clothing.o: Clothing.cpp Clothing.h
+	c++ -c Clothing.cpp
+
+Pants.o: Pants.cpp Pants.h
+	c++ -c Pants.cpp
+
+main.o: main.cpp
+	c++ -c main.cpp
+
+clean: 
+	rm -f *.o *.out program
+
+

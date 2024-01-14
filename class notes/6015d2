@@ -1,0 +1,81 @@
+software practice lecture 2
+
+c++ vs java
+
+class Posn{
+
+}
+
+Posn *Obj1 = new Posn(2,3); //on heap
+delete Obj1; //whenever need to delete
+
+Posn Obj2 (10,20)// on stack //will be deleted when out of scope , so dont need to worry about deleting it like a pointer
+
+advantage to pointer
+  data changes
+  big reason: dont know type of object in advance
+  have parent class create object
+  on run time need to decide which class it is
+  define a pointer that takes memory in heap
+
+
+in header file
+  declaration
+  member variables
+  signature of methods
+  signature of
+
+  in implementation before method signature us "::" shoes it belongs to Posn class
+    Posn::Posn(int x , int y){}
+
+good to pass a reference generally
+
+printArea(Shape& shape)
+
+printArea(Shape* shape)
+
+project
+implementing equality
+
+dynamic cast
+Tiger *t = dynamic_cast<Tiger*>(a);
+if (t == Null)
+  return false;
+
+  dynamic_cast<name of class then the pointer &>
+
+
+
+interpreter takes high level language to low level machine language
+
+program to take arguments
+--interp
+asking to interperat whats coming next
+
+argc how many arguments passed after program
+argv array of arguments after the program
+
+expression can be a number, number + number, number * number
+
+<exp> = <number | <expr> + <expr> | <expr> * <expr>
+
+many objects need a class
+
+expression class with child classes for each type
+  parenthesis multiplication addition
+
+expression - child classes
+c++ no interfaces - need to use the abstract class
+
+class expr{};
+class num: public expr
+class add : public expr
+class mult : public expr
+
+publid:
+  EXpr *lhs; ponter to create memory on heap bc not sure what it will be (2+3) + (3*4+7) - exp + exp
+    dont know type or how deep it is
+
+= 0 means each subclass must override it
+  virtual bool equals (expr *e) = 0;
+  
