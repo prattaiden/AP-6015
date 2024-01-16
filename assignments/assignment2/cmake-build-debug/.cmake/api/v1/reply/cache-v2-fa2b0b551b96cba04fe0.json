@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/aidenpratt/Documents/AP-6015/assignments/assignment1/cmake-build-debug"
+			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/assignments/assignment2/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/aidenpratt/Documents/AP-6015/assignments/assignment1/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/assignments/assignment2/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/aidenpratt/Documents/AP-6015/assignments/assignment1"
+			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/assignments/assignment2"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -819,7 +819,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "assignment1"
+			"value" : "assignment2"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1118,7 +1118,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "assignment1_BINARY_DIR",
+			"name" : "assignment2_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1127,10 +1127,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/aidenpratt/Documents/AP-6015/assignments/assignment1/cmake-build-debug"
+			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/assignments/assignment2/cmake-build-debug"
 		},
 		{
-			"name" : "assignment1_IS_TOP_LEVEL",
+			"name" : "assignment2_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1142,7 +1142,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "assignment1_SOURCE_DIR",
+			"name" : "assignment2_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1151,7 +1151,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/aidenpratt/Documents/AP-6015/assignments/assignment1"
+			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/assignments/assignment2"
 		}
 	],
 	"kind" : "cache",

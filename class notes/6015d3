@@ -1,39 +1,53 @@
-lecture 2 finish up
+version control (source control) GIT
 
-device is a state machine that checks to see whats on the bus
-keyboard, did user type anything
+Git used to manage source code
+  use this tool to communicate with service (GITHUB)stores it remotely
 
-one person talking on the bus at a time
+remote repo
 
-memory hierarchy fastest to slowest
-  registers - 1cycle
-  cache(l1,l2) - faster version of memory that main memory , faster than main memory - 10cycles
-  main memory(ram) -50or100 cycles
-  disk
+working folder:
+local machine - file1.txt, file2.txt
+git init: creates local repo on local machine
 
-state machine
-control unit for cpu state machine
-  fetch an instruction
-    ask ram for instruction whose address is stored in the ip
-      getting it from the cache
-  execute instruction we got
-  repeat
+local repository
 
-IR instruction register
-IP instruction pointer
+staging area:
+file which stores info about what will
+when have working repo
+can use git add to add files, the files go into staging area
+git commit - file transferred from staging area to local repository
+all on local machine
+
+to restore deleted
+
+: git reset - hard
+- go to local repo where have file and get it back
+
+every commit has a unique id
+git log. - to see the ids of different commits
+
+git1 clone git1 git1cloned - creates directory repo and moves files to it as well
 
 
-lecture 3 assembly
-quiz:
-   char* is a string pointer
-   length is 4 3/ 4bytes of memory
-   as a char pointer in the memory, points to first char
-   \0
-   strlen
+synthesizer phase 1 before gui
 
-   sizeof() however big a pointer is
-   size_t placeholder that matches the size of your computer
-   _t convention that it is a type
+branches is like creating a folder of current working directory
+work1 - feature 1 for GUI interface
+merge to master
+git merge <branch>
 
-stack frame all the data for a specific function
-heap is dynamically allocated
+git branch - shows brnaches and * which one we are in
+git branch work
+  creates work branch
+    git checkout work
+      moves us into work branch
+
+git merge --squash work
+  two branches time to do a merge
+
+-f flag, ignore history push everything ignore different commits  FORCE push
+-u flag , upstream is that particular repo name
+
+git remote: setting remote repo
+add name : git@github.com:user/repo - github hosting service
+git push -f -u main
