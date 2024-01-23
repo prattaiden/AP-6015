@@ -9,11 +9,11 @@
 #include <string>
 
 class expr {
-
+public:
     virtual bool equals(expr *e) = 0;//each subclass must override
 };
 
-
+//-----------NUM----------//
 class Num : public expr {
 public:
     int val;
@@ -24,7 +24,7 @@ public:
 
 };
 
-
+//----------ADD-----------//
 class Add : public expr{
 public:
     expr *lhs;
@@ -32,10 +32,11 @@ public:
 
     Add(expr *lhs, expr *rhs);
 
-    bool equals(expr *e) override;
+    bool equals(expr *e);
 
 };
 
+//-----------MULT-------//
 class Mult : public expr {
 public:
     expr *lhs;
@@ -47,11 +48,12 @@ public:
 
 };
 
+//------------VAR----------//
 class Var : public expr{
 public:
     std::string val;
 
-    explicit Var(std::string val);
+    Var(std::string val);
 
     bool equals(expr *e) override;
 

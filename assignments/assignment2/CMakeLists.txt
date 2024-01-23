@@ -7,4 +7,6 @@ add_executable(assignment2 main.cpp
         expr.cpp
         expr.h
         cmdline.cpp
+        tests.cpp
+        tests.cpp
 )

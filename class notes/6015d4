@@ -1,0 +1,30 @@
+testing I/O
+
+quiz next Tuesday
+
+systematic testing example
+
+binarysearch
+
+
+macros vs function
+
+function takes arg return something
+
+macro label in source code that is replaced with its value with predessosr before compilation
+#define PI 3.1416 //object like
+
+#define AREA(r) r * r * PI
+
+float radius = 5;
+result = AREA(radius); - replaced by radius * radius * PI
+code replacement in the code
+
+Catch::Session().run(1,argv);
+
+test catch 2 demo:
+./binary -c name_testcase or name of section
+./msd --test
+./msd --help
+
+run all tests 

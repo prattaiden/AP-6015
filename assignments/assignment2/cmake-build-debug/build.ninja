@@ -67,8 +67,8 @@ build CMakeFiles/assignment2.dir/cmdline.cpp.o: CXX_COMPILER__assignment2_unscan
   OBJECT_DIR = CMakeFiles/assignment2.dir
   OBJECT_FILE_DIR = CMakeFiles/assignment2.dir
 
-build CMakeFiles/assignment2.dir/Num.cpp.o: CXX_COMPILER__assignment2_unscanned_Debug /Users/aidenpratt/Documents/Documents$ -$ Aiden’s$ MacBook$ Pro/AP-6015/assignments/assignment2/Num.cpp || cmake_object_order_depends_target_assignment2
-  DEP_FILE = CMakeFiles/assignment2.dir/Num.cpp.o.d
+build CMakeFiles/assignment2.dir/tests.cpp.o: CXX_COMPILER__assignment2_unscanned_Debug /Users/aidenpratt/Documents/Documents$ -$ Aiden’s$ MacBook$ Pro/AP-6015/assignments/assignment2/tests.cpp || cmake_object_order_depends_target_assignment2
+  DEP_FILE = CMakeFiles/assignment2.dir/tests.cpp.o.d
   FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/assignment2.dir
   OBJECT_FILE_DIR = CMakeFiles/assignment2.dir
@@ -81,7 +81,7 @@ build CMakeFiles/assignment2.dir/Num.cpp.o: CXX_COMPILER__assignment2_unscanned_
 #############################################
 # Link the executable assignment2
 
-build assignment2: CXX_EXECUTABLE_LINKER__assignment2_Debug CMakeFiles/assignment2.dir/main.cpp.o CMakeFiles/assignment2.dir/expr.cpp.o CMakeFiles/assignment2.dir/cmdline.cpp.o CMakeFiles/assignment2.dir/Num.cpp.o
+build assignment2: CXX_EXECUTABLE_LINKER__assignment2_Debug CMakeFiles/assignment2.dir/main.cpp.o CMakeFiles/assignment2.dir/expr.cpp.o CMakeFiles/assignment2.dir/cmdline.cpp.o CMakeFiles/assignment2.dir/tests.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/assignment2.dir
   POST_BUILD = :

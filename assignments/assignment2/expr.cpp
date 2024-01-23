@@ -1,22 +1,19 @@
 //
 // Created by Aiden Pratt on 1/16/24.
 //
-
 #include "expr.h"
-
+#include "catch.h"
 #include <utility>
 
 bool expr::equals(expr *e) {
     return false;
 }
 
-
 //-------------NUM---------------//
 
 Num :: Num(int val){
     this->val = val;
 }
-
 bool Num::equals(expr *e) {
     Num *n = dynamic_cast<Num*>(e);
     if(n == nullptr){
@@ -34,14 +31,13 @@ Add :: Add(expr *lhs, expr *rhs){
     this->rhs = rhs;
 
 }
-
 bool Add::equals(expr *e) {
     Add *a = dynamic_cast<Add*>(e);
     if(a == nullptr){
         return false;
     }
     else{
-        return ((this->lhs == a->lhs) && (this->rhs == a->rhs));
+        return (lhs->equals(a->lhs)) && (rhs->equals(a->rhs));
     }
 }
 
@@ -59,14 +55,14 @@ bool Mult::equals(expr *e) {
         return false;
     }
     else{
-        return ((this->lhs == m->lhs) && (this->rhs == m->rhs));
+        return (lhs->equals(m->lhs)) && ((rhs->equals(m->rhs)));
     }
 }
 
 //--------------VAR---------------//
 
 Var :: Var(std::string val) {
-    this->val = std::move(val);
+    this->val = val;
 }
 
 bool Var::equals(expr *e) {
@@ -77,5 +73,5 @@ bool Var::equals(expr *e) {
     else{
         return this->val == v->val;
     }
-
 }
+
