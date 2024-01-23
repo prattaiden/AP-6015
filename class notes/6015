@@ -1,0 +1,26 @@
+good programing
+1/23/24
+
+representation - data
+purpose - signature - header
+
+
+how to design programs
+
+== for two objects
+  in c++ compare two objects cant ==
+    ->equals
+
+project nested expressions
+  2+3+4
+    slots needed for expression?
+      2
+        dont want to add slots for how many expressions there are
+        =
+
+>7+(5+(10+21))
+  new Add (7, new Add(5, new Add(10 + 21))) - linked list
+
+  (2*2 + 3*2)*(4+5)
+
+new Mult(new Add(new Mult (2 , 2), new Mult( 3, 2)), new Add(4,5)) - tree

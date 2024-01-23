@@ -35,3 +35,21 @@ TEST_CASE("Test_Var"){
     CHECK((new Var("6"))->equals((new Num (6)))== false);
     CHECK((new Var("6"))->equals((new Var ("6")))== true);
 }
+
+
+TEST_CASE("TEST_Interp_Nabil"){
+    CHECK_THROWS_WITH( (new Var("x"))->interp(), "no value for variable" );
+    CHECK( (new Mult(new Num(3), new Num(2)))->interp()==6 );
+    CHECK( (new Add(new Add(new Num(10), new Num(15)),new Add(new Num(20),new Num(20))))->interp()==65);
+}
+
+TEST_CASE("Test_has_variable"){
+    CHECK((new Add(new Var("x"), new Num(3)))->has_variable() == true);
+    CHECK((new Add(new Num(5), new Num(5)))->has_variable() == false);
+    CHECK( (new Add(new Add(new Num(10), new Var("y")),new Add(new Num(20),new Num(20))))->has_variable()==true);
+}
+
+TEST_CASE("Test_subst_Nabil"){
+    CHECK( (new Add(new Var("x"), new Num(7)))->subst("x", new Var("y"))->equals(new Add(new Var("y"), new Num(7))) );
+    CHECK( (new Var("x"))->subst("x", new Add(new Var("y"),new Num(7)))->equals(new Add(new Var("y"),new Num(7))) );
+}

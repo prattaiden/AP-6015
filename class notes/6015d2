@@ -78,4 +78,3 @@ publid:
 
 = 0 means each subclass must override it
   virtual bool equals (expr *e) = 0;
-  
