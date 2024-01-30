@@ -36,11 +36,15 @@ TEST_CASE("Test_Var"){
     CHECK((new Var("6"))->equals((new Var ("6")))== true);
 }
 
-
 TEST_CASE("TEST_Interp_Nabil"){
     CHECK_THROWS_WITH( (new Var("x"))->interp(), "no value for variable" );
     CHECK( (new Mult(new Num(3), new Num(2)))->interp()==6 );
     CHECK( (new Add(new Add(new Num(10), new Num(15)),new Add(new Num(20),new Num(20))))->interp()==65);
+}
+
+TEST_CASE("Test_subst_Nabil"){
+    CHECK( (new Add(new Var("x"), new Num(7)))->subst("x", new Var("y"))->equals(new Add(new Var("y"), new Num(7))) );
+    CHECK( (new Var("x"))->subst("x", new Add(new Var("y"),new Num(7)))->equals(new Add(new Var("y"),new Num(7))) );
 }
 
 TEST_CASE("Test_has_variable"){
@@ -49,7 +53,34 @@ TEST_CASE("Test_has_variable"){
     CHECK( (new Add(new Add(new Num(10), new Var("y")),new Add(new Num(20),new Num(20))))->has_variable()==true);
 }
 
-TEST_CASE("Test_subst_Nabil"){
-    CHECK( (new Add(new Var("x"), new Num(7)))->subst("x", new Var("y"))->equals(new Add(new Var("y"), new Num(7))) );
-    CHECK( (new Var("x"))->subst("x", new Add(new Var("y"),new Num(7)))->equals(new Add(new Var("y"),new Num(7))) );
+TEST_CASE("Test_has_variable_2"){
+    CHECK((new Var("l"))->has_variable()== true);
+    CHECK((new Num (2))->has_variable()==false);
+    CHECK((new Add(new Num(4), new Num(10)))->has_variable()==false);
 }
+
+TEST_CASE("Test_Interp_Mult"){
+    CHECK((new Mult(new Mult(new Num(4), new Num(3)), new Num(6)))->interp()==72);
+    CHECK((new Mult(new Num (2), new Num(20)))->interp()==40);
+}
+
+TEST_CASE("Test_Interp_Add"){
+    CHECK((new Add(new Add(new Num(4), new Num(3)), new Num(6)))->interp()==13);
+    CHECK((new Add(new Num (2), new Num(20)))->interp()==22);
+    CHECK((new Add(new Num(2), new Num(2)))->interp()==4);
+    CHECK((new Add(new Num(69), new Num(20)))->interp()==89);
+}
+
+TEST_CASE("Test_Sub"){
+    CHECK((new Add(new Var("x"), new Num(7)))->subst("x", new Var("y"))->equals(new Add(new Var("y"), new Num(7))) );
+    CHECK((new Var("x"))->subst("x", new Add(new Var("y"),new Num(7)))->equals(new Add(new Var("y"),new Num(7))) );
+    CHECK((new Num(3))->subst("3", new Var("r"))->equals(new Num(3)));
+    CHECK((new Num(4))->subst("4", new Var("o"))->equals(new Num(4)));
+}
+
+TEST_CASE("Test_Sub_Mult"){
+    CHECK((new Mult(new Var("x"),new Var("y")))->subst("x", new Num(5))->equals(new Mult(new Num(5),new Var("y"))));
+    CHECK((new Mult(new Var("r"),new Var("y")))->subst("x", new Num(5))->equals(new Mult(new Var("r"),new Var("y"))));
+}
+
+
