@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/assignments/msdscript/cmake-build-debug"
+			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/msdscript/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/assignments/msdscript/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/msdscript/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/assignments/msdscript"
+			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/msdscript"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -819,7 +819,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "assignment2"
+			"value" : "msdscript"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1127,7 +1127,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/assignments/msdscript/cmake-build-debug"
+			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/msdscript/cmake-build-debug"
 		},
 		{
 			"name" : "assignment2_IS_TOP_LEVEL",
@@ -1151,7 +1151,43 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/assignments/msdscript"
+			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/msdscript"
+		},
+		{
+			"name" : "msdscript_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/msdscript/cmake-build-debug"
+		},
+		{
+			"name" : "msdscript_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "msdscript_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/aidenpratt/Documents/Documents - Aiden\u2019s MacBook Pro/AP-6015/msdscript"
 		}
 	],
 	"kind" : "cache",

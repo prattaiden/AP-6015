@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "assignment2"
+			"path" : "msdscript"
 		}
 	],
 	"backtrace" : 1,
@@ -56,7 +56,7 @@
 			]
 		}
 	],
-	"id" : "assignment2::@6890427a1f51a3e7e1df",
+	"id" : "msdscript::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -72,8 +72,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "assignment2",
-	"nameOnDisk" : "assignment2",
+	"name" : "msdscript",
+	"nameOnDisk" : "msdscript",
 	"paths" : 
 	{
 		"build" : ".",
