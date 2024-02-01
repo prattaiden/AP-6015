@@ -22,7 +22,7 @@ program: $(CXXSOURCE) $(HEADERS)
 clean: 
 	rm -f *.o *.out program
 
-test : tests.cpp
+test : msdscript
 	./msdscript --test
 
 printM:
