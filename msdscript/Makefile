@@ -11,16 +11,16 @@ CFLAGS= -std=c++11
 CXXSOURCE= cmdline.cpp main.cpp expr.cpp tests.cpp
 HEADERS= cmdline.hpp catch.h expr.h
 
-run: program
+run: msdscript
 	./msdscript
 
-program: $(CXXSOURCE) $(HEADERS)
+msdscript: $(CXXSOURCE) $(HEADERS)
 	$(CXX) $(CFLAGS) -o msdscript $(CXXSOURCE)
 
 .PHONY: clean
 
 clean: 
-	rm -f *.o *.out program
+	rm -f *.o *.out msdscript
 
 test : msdscript
 	./msdscript --test
