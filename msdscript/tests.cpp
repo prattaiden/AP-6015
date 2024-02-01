@@ -1,3 +1,4 @@
+#include <iostream>
 #include "catch.h"
 #include "expr.h"
 
@@ -101,5 +102,45 @@ TEST_CASE("Test_More_Zeros"){
     CHECK((new Add(new Num(0), new Num(0)))->interp()==0);
     CHECK((new Mult(new Num(0), new Num(4)))->interp()==0);
     CHECK((new Mult(new Num(0), new Num(-4)))->interp()==0);
+}
+
+TEST_CASE("Test_Print") {
+  Mult *multTest3 = new Mult(new Num(2), new Mult(new Num(3), new Num(4)));
+  Mult *multTest1 = new Mult(new Num(2), new Add(new Num(3), new Num(4)));
+  Mult *multTest2 = new Mult(new Mult(new Num(2), new Num(2)), new Add(new Num(2), new Num(2)));
+  Mult *multTest4 = new Mult(new Add(new Num(2), new Num(3)), new Mult(new Num(4), new Num(6)));
+  Mult *multTest5 = new Mult(new Add( new Num(1), new Num(2)), new Num(3));
+
+  Add *addTest1 = new Add(new Mult(new Num(2), new Num(3)), new Num(1));
+    Add *addTest2 = new Add(new Num(1), new Mult(new Num(2), new Num(3)));
+
+    std::cout << "\n";
+    multTest3->pretty_print_at(std::cout);
+    std::cout << "\n";
+    multTest1->pretty_print_at(std::cout);
+    std::cout << "\n";
+    multTest2->pretty_print_at(std::cout);
+    std::cout << "\n";
+    multTest4->pretty_print_at(std::cout);
+    std::cout << "\n";
+    addTest1->pretty_print_at(std::cout);
+    std::cout << "\n";
+    multTest5->pretty_print_at(std::cout);
+    std::cout << "\n";
+    addTest2->pretty_print_at(std::cout);
+
+
+}
+
+TEST_CASE("Test_to_string"){
+    CHECK( (new Num(10))->to_string() == "10" );
+    CHECK((new Add(new Num(1), new Num(3)))->to_string() == "(1+3)");
+}
+
+TEST_CASE("Test_to_pp_string"){
+    CHECK( (new Num(10))->to_string() == "10" );
+    CHECK( (new Mult(new Add( new Num(1), new Num(2)), new Num(3)))->to_pp_string() == "(1 + 2) * 3" );
+    CHECK((new Mult(new Add(new Num(2), new Num(3)), new Mult(new Num(4), new Num(6))))->to_pp_string() == "(2 + 3) * 4 * 6");
+    CHECK((new Mult(new Mult(new Num(2), new Num(3)), new Num(4)))->to_pp_string() == "(2 * 3) * 4");
 }
 

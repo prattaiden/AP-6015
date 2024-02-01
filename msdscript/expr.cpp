@@ -6,6 +6,8 @@
 #include <utility>
 #include <stdexcept>
 #include <iostream>
+#include <sstream>
+
 
 //---------------EXPR---------------//
 bool expr::equals(expr *e) {
@@ -15,16 +17,17 @@ int expr::interp() {
     return 0;
 }
 
-void expr::print(std::ostream&) {
-    new Num(3);
-    std::cout << new Num(3);
-    Num num = *new Num(3);
-
-}
-
-expr* subst(std::string string, expr* e){
-    return e;
-}
+//void expr::print(std::ostream&) {
+//    new Num(3);
+//    std::cout << new Num(3);
+//    Num num = *new Num(3);
+//
+//}
+//
+//
+//expr* subst(std::string string, expr* e){
+//    return e;
+//}
 
 
 
@@ -50,6 +53,15 @@ bool Num::has_variable() {
 }
 expr* Num::subst(std::string string, expr *e) {
     return new Num(this->val);
+}
+
+void Num::print(std::ostream &ostream) {
+    ostream << this->val;
+}
+
+
+void Num::pretty_print(std::ostream &ostream, precedence_t p) {
+    ostream << this->val;
 }
 
 //-----------ADD--------------//
@@ -80,6 +92,29 @@ expr* Add::subst(std::string string, expr *e) {
     return(new Add(this->lhs->subst(string, e),(this->rhs->subst(string,e))));
 }
 
+void Add::print(std::ostream &ostream) {
+    ostream << "(";
+    (this->lhs->print(ostream));
+    ostream << "+";
+    (this->rhs->print(ostream));
+    ostream << ")";
+}
+
+void Add::pretty_print(std::ostream &ostream, precedence_t p) {
+    if(p > prec_add){
+        ostream << "(";
+    }
+
+    (this->lhs->pretty_print(ostream, prec_add));
+    ostream << " + ";
+    (this->rhs->pretty_print(ostream, prec_add));
+
+    if(p > prec_add){
+        ostream << ")";
+    }
+}
+
+
 //-----------MULT----------------\\
 
 Mult :: Mult(expr *lhs, expr *rhs) {
@@ -108,6 +143,33 @@ bool Mult::has_variable() {
 
 expr* Mult::subst(std::string string, expr *e) {
     return(new Mult(this->lhs->subst(string, e),(this->rhs->subst(string,e))));
+}
+
+void Mult::print(std::ostream &ostream) {
+    ostream << "(";
+    (this->lhs->print(ostream));
+    ostream << "*";
+    (this->rhs->print(ostream));
+    ostream << ")";
+}
+
+
+void Mult::pretty_print(std::ostream &ostream, precedence_t p) {
+
+    if(p > prec_mult){
+        ostream << "(";
+    }
+
+
+        (this->lhs->pretty_print(ostream, static_cast<precedence_t>(prec_mult + 1)));
+        ostream << " * ";
+        (this->rhs->pretty_print(ostream, prec_mult));
+
+
+    if(p > prec_mult){
+        ostream << ")";
+    }
+
 }
 //--------------VAR---------------//
 
@@ -140,5 +202,14 @@ expr* Var::subst(std::string string, expr *e) {
 //    return this;
 //returning a new object
     return new Var(this->var);
+}
+
+void Var::print(std::ostream &ostream) {
+    ostream << this->var;
+}
+
+
+void Var::pretty_print(std::ostream &ostream, precedence_t p) {
+    ostream << this->var;
 }
 

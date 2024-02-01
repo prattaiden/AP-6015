@@ -7,6 +7,14 @@
 
 
 #include <string>
+#include <sstream>
+
+typedef enum {
+    prec_none = 0,      // = 0
+    prec_add = 1,       // = 1
+    prec_mult = 2       // = 2
+} precedence_t;
+
 
 class expr {
 public:
@@ -14,7 +22,25 @@ public:
     virtual int interp() = 0;
     virtual bool has_variable() = 0;
     virtual expr* subst(std::string string , expr *e) = 0;
-    void print(std::ostream&);
+    virtual void print(std::ostream&) = 0;
+
+    std::string to_string(){
+        std::stringstream st("");
+        this->print(st);
+        return st.str();
+    }
+
+    std::string to_pp_string(){
+        std::stringstream st("");
+        this->pretty_print_at(st);
+        return st.str();
+    }
+
+    void pretty_print_at(std::ostream &ostream){
+       this->pretty_print(ostream, prec_none);
+    }
+
+    virtual void pretty_print(std::ostream &ostream, precedence_t p) = 0;
 };
 
 //-----------NUM----------//
@@ -26,6 +52,9 @@ public:
     int interp() override;
     bool has_variable() override;
     expr* subst(std::string string , expr *e) override;
+    void print(std::ostream &ostream) override;
+    void pretty_print(std::ostream &override, precedence_t p) override;
+
 };
 
 //----------ADD-----------//
@@ -38,6 +67,8 @@ public:
     int interp() override;
     bool has_variable() override;
     expr* subst(std::string string , expr *e) override;
+    void print(std::ostream &ostream) override;
+    void pretty_print(std::ostream &ostream, precedence_t p) override;
 };
 
 //-----------MULT-------//
@@ -50,6 +81,8 @@ public:
     int interp() override;
     bool has_variable() override;
     expr* subst(std::string string , expr *e) override;
+    void print(std::ostream &ostream) override;
+    void pretty_print(std::ostream &ostream, precedence_t p) override;
 };
 
 //------------VAR----------//
@@ -61,6 +94,9 @@ public:
     int interp() override;
     bool has_variable() override;
     expr* subst(std::string string , expr *e) override;
+    void print(std::ostream &ostream) override;
+    void pretty_print(std::ostream &ostream, precedence_t p) override;
 };
+
 
 #endif //ASSIGNMENT2_EXPR_H
