@@ -96,7 +96,7 @@ that need to be handled:
   return null
 
 correctness, return accurate results
-robustness , keep system running 
+robustness , keep system running
 bad_alloc - when memory allocation fails
 bad_cast - when dynamic cast fails
 
@@ -117,3 +117,21 @@ new Add(new mult2,3 , 4)
 new mult( 1 , new add( 2, 3))
 
 1 * (2+3)
+
+2/1/24
+to string to print
+
+parsing the input
+
+substitute
+
+
+code coverage:
+  how much of your code is executed while testing
+  expression of the goodness of your test cases
+
+  path coverage
+
+in run , arguments
+ add --test
+ product, scheme, edit scheme, run, arguments, add --test 

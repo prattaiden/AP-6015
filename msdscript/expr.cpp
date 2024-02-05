@@ -17,20 +17,6 @@ int expr::interp() {
     return 0;
 }
 
-//void expr::print(std::ostream&) {
-//    new Num(3);
-//    std::cout << new Num(3);
-//    Num num = *new Num(3);
-//
-//}
-//
-//
-//expr* subst(std::string string, expr* e){
-//    return e;
-//}
-
-
-
 //-------------NUM---------------//
 
 Num :: Num(int val){
@@ -159,17 +145,13 @@ void Mult::pretty_print(std::ostream &ostream, precedence_t p) {
     if(p > prec_mult){
         ostream << "(";
     }
-
-
         (this->lhs->pretty_print(ostream, static_cast<precedence_t>(prec_mult + 1)));
         ostream << " * ";
         (this->rhs->pretty_print(ostream, prec_mult));
 
-
     if(p > prec_mult){
         ostream << ")";
     }
-
 }
 //--------------VAR---------------//
 
