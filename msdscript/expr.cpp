@@ -8,20 +8,37 @@
 #include <iostream>
 #include <sstream>
 
+/**
+ * \file expr.cpp
+ * \brief contains expression class and children classes: num, add, mult, var
+ */
 
 //---------------EXPR---------------//
+/**
+* \brief Calculates distance between two points
+* \param expr *e argument to check equals with
+*/
 bool expr::equals(expr *e) {
     return false;
 }
+
+/**
+ *
+ * @return
+ */
 int expr::interp() {
     return 0;
 }
 
 //-------------NUM---------------//
-
 Num :: Num(int val){
     this->val = val;
 }
+/**
+ *
+ * @param e
+ * @return
+ */
 bool Num::equals(expr *e) {
     Num *n = dynamic_cast<Num*>(e);
     if(n == nullptr){
@@ -31,31 +48,63 @@ bool Num::equals(expr *e) {
         return this->val == n->val;
     }
 }
+/**
+ *
+ * @return
+ */
 int Num::interp() {
     return val;
 }
+/**
+ *
+ * @return
+ */
 bool Num::has_variable() {
     return false;
 }
+/**
+ *
+ * @param string
+ * @param e
+ * @return
+ */
 expr* Num::subst(std::string string, expr *e) {
     return new Num(this->val);
 }
-
+/**
+ *
+ * @param ostream
+ */
 void Num::print(std::ostream &ostream) {
     ostream << this->val;
 }
 
-
+/**
+ *
+ * @param ostream
+ * @param p
+ */
 void Num::pretty_print(std::ostream &ostream, precedence_t p) {
     ostream << this->val;
+    //call print
 }
 
 //-----------ADD--------------//
 
+/**
+ *
+ * @param lhs
+ * @param rhs
+ */
 Add :: Add(expr *lhs, expr *rhs){
     this->lhs = lhs;
     this->rhs = rhs;
 }
+/**
+ *
+ * @param e
+ * @return
+ */
 bool Add::equals(expr *e) {
     Add *a = dynamic_cast<Add*>(e);
     if(a == nullptr){
@@ -65,7 +114,10 @@ bool Add::equals(expr *e) {
         return (lhs->equals(a->lhs)) && (rhs->equals(a->rhs));
     }
 }
-
+/**
+ *
+ * @return
+ */
 int Add::interp(){
     return this->lhs->interp() + this->rhs->interp();
 }

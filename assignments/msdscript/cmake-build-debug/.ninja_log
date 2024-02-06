@@ -1,6 +1,0 @@
-# ninja log v5
-6	274	1705602148001342949	CMakeFiles/assignment2.dir/tests.cpp.o	7a2e29f42f63235
-6	2016	1705602149738093231	CMakeFiles/assignment2.dir/cmdline.cpp.o	9383316192d77316
-5	282	1705602148009990850	CMakeFiles/assignment2.dir/main.cpp.o	eb0f949e329c4fd
-4	274	1705602156568976166	CMakeFiles/assignment2.dir/expr.cpp.o	9d4b6ad670e528fc
-274	333	1705602156629900139	assignment2	8788bdfbe9958c17

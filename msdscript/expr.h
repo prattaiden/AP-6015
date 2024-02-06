@@ -4,15 +4,20 @@
 
 #ifndef msdscript_EXPR_H
 #define msdscript_EXPR_H
-
-
 #include <string>
 #include <sstream>
 
+/**
+ * \file expr.h
+ * \brief contains declarations for methods of each class
+ */
+
 typedef enum {
-    prec_none = 0,      // = 0
-    prec_add = 1,       // = 1
-    prec_mult = 2       // = 2
+    prec_none = 0,
+    prec_add = 1,
+    prec_mult = 2,
+    prec_let = 3
+
 } precedence_t;
 
 

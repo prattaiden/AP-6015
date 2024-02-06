@@ -28,3 +28,5 @@ test : msdscript
 printM:
 	$ (echo $(HEADERS) $(CXXSOURCE))
 
+doc: msdscript
+	cd documentation && doxygen

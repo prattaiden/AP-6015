@@ -1,0 +1,146 @@
+\doxysection{Num Class Reference}
+\hypertarget{class_num}{}\label{class_num}\index{Num@{Num}}
+Inheritance diagram for Num\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_num}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_num_a9fce58e650a99ae50f4140ed9c87ec9f}\label{class_num_a9fce58e650a99ae50f4140ed9c87ec9f} 
+{\bfseries Num} (int val)
+\item 
+bool \mbox{\hyperlink{class_num_a1d234f90506708fefaff02734bf95db5}{equals}} (\mbox{\hyperlink{classexpr}{expr}} \texorpdfstring{$\ast$}{*}e) override
+\item 
+int \mbox{\hyperlink{class_num_a0c55f8227dd834ec1961f745fce2d75e}{interp}} () override
+\item 
+bool \mbox{\hyperlink{class_num_a24a51278e76d4b01b457fb5f521bcc38}{has\+\_\+variable}} () override
+\item 
+\mbox{\hyperlink{classexpr}{expr}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_num_a2bd99bf1de2e84f047a077765c625168}{subst}} (std\+::string string, \mbox{\hyperlink{classexpr}{expr}} \texorpdfstring{$\ast$}{*}e) override
+\item 
+void \mbox{\hyperlink{class_num_a59b419a918cdd9f2df5ab098de0cd630}{print}} (std\+::ostream \&ostream) override
+\item 
+void \mbox{\hyperlink{class_num_adbc9d0de54f226825d65525c6ff2b583}{pretty\+\_\+print}} (std\+::ostream \&override, precedence\+\_\+t p) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classexpr}{expr}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries to\+\_\+string} ()
+\item 
+std\+::string {\bfseries to\+\_\+pp\+\_\+string} ()
+\item 
+void {\bfseries pretty\+\_\+print\+\_\+at} (std\+::ostream \&ostream)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_num_ab0654582066deb3adbbd64cf7190a7b7}\label{class_num_ab0654582066deb3adbbd64cf7190a7b7} 
+int {\bfseries val}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_num_a1d234f90506708fefaff02734bf95db5}\label{class_num_a1d234f90506708fefaff02734bf95db5} 
+\index{Num@{Num}!equals@{equals}}
+\index{equals@{equals}!Num@{Num}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily bool Num\+::equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classexpr}{expr}} \texorpdfstring{$\ast$}{*}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classexpr_ace167083262a5660abc2f5c3b2cffaa9}{expr}}.
+
+\Hypertarget{class_num_a24a51278e76d4b01b457fb5f521bcc38}\label{class_num_a24a51278e76d4b01b457fb5f521bcc38} 
+\index{Num@{Num}!has\_variable@{has\_variable}}
+\index{has\_variable@{has\_variable}!Num@{Num}}
+\doxysubsubsection{\texorpdfstring{has\_variable()}{has\_variable()}}
+{\footnotesize\ttfamily bool Num\+::has\+\_\+variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classexpr}{expr}}.
+
+\Hypertarget{class_num_a0c55f8227dd834ec1961f745fce2d75e}\label{class_num_a0c55f8227dd834ec1961f745fce2d75e} 
+\index{Num@{Num}!interp@{interp}}
+\index{interp@{interp}!Num@{Num}}
+\doxysubsubsection{\texorpdfstring{interp()}{interp()}}
+{\footnotesize\ttfamily int Num\+::interp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classexpr_ae1b13259e12d33e9d77871c5ae7d9578}{expr}}.
+
+\Hypertarget{class_num_adbc9d0de54f226825d65525c6ff2b583}\label{class_num_adbc9d0de54f226825d65525c6ff2b583} 
+\index{Num@{Num}!pretty\_print@{pretty\_print}}
+\index{pretty\_print@{pretty\_print}!Num@{Num}}
+\doxysubsubsection{\texorpdfstring{pretty\_print()}{pretty\_print()}}
+{\footnotesize\ttfamily void Num\+::pretty\+\_\+print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{ostream,  }\item[{precedence\+\_\+t}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ostream} & \\
+\hline
+{\em p} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classexpr}{expr}}.
+
+\Hypertarget{class_num_a59b419a918cdd9f2df5ab098de0cd630}\label{class_num_a59b419a918cdd9f2df5ab098de0cd630} 
+\index{Num@{Num}!print@{print}}
+\index{print@{print}!Num@{Num}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Num\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{ostream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ostream} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classexpr}{expr}}.
+
+\Hypertarget{class_num_a2bd99bf1de2e84f047a077765c625168}\label{class_num_a2bd99bf1de2e84f047a077765c625168} 
+\index{Num@{Num}!subst@{subst}}
+\index{subst@{subst}!Num@{Num}}
+\doxysubsubsection{\texorpdfstring{subst()}{subst()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classexpr}{expr}} \texorpdfstring{$\ast$}{*} Num\+::subst (\begin{DoxyParamCaption}\item[{std\+::string}]{string,  }\item[{\mbox{\hyperlink{classexpr}{expr}} \texorpdfstring{$\ast$}{*}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classexpr}{expr}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/aidenpratt/\+Documents/\+Documents -\/ Aiden’s Mac\+Book Pro/\+AP-\/6015/msdscript/\mbox{\hyperlink{expr_8h}{expr.\+h}}\item 
+/\+Users/aidenpratt/\+Documents/\+Documents -\/ Aiden’s Mac\+Book Pro/\+AP-\/6015/msdscript/\mbox{\hyperlink{expr_8cpp}{expr.\+cpp}}\end{DoxyCompactItemize}

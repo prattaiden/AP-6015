@@ -1,3 +1,0 @@
-/Users/aidenpratt/Documents/Documents - Aiden’s MacBook Pro/AP-6015/assignments/msdscript/cmake-build-debug/CMakeFiles/assignment2.dir
-/Users/aidenpratt/Documents/Documents - Aiden’s MacBook Pro/AP-6015/assignments/msdscript/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/aidenpratt/Documents/Documents - Aiden’s MacBook Pro/AP-6015/assignments/msdscript/cmake-build-debug/CMakeFiles/rebuild_cache.dir

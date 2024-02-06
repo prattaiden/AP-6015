@@ -6,6 +6,11 @@
 #define CATCH_CONFIG_RUNNER
 #include "catch.h"
 
+/**
+ * \file cmdline.cpp
+ * \brief implementation of use_arguments for the command line
+ */
+
 void use_arguments(int argc, char **argv) {
     int length = argc;
     bool testFlag = false;
